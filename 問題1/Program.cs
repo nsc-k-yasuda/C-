@@ -12,7 +12,11 @@ namespace Sample1
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("こんにちは");
+            Console.WriteLine("{0} + {1} = {2}", 5, 3, 5 + 3);
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 - 2);
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 * 2);
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 / 2);
+            Console.WriteLine("{0} + {1} = {2}", 5, 2, 5 % 2);
         }
     }
 }
