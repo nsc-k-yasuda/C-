@@ -9,28 +9,21 @@ namespace prob4_12
     {
         static void Main(string[] args)
         {
-            while (true)
+            Random rnd = new Random();
+            int dice = rnd.Next(1, 101);
+            for (int i = 0; i <= 5; i++)
             {
-                i++;
-                List<int> rndlist = new List<int>();
-                Random rnd = new Random();
-                for (int i = 1; i <= 5; i++)
-                {
-                    int a = rnd.Next(1, 101);
-                    //Console.Write(a);
-                    rndlist.Add(a);
-                    if (a % 2 == 0)
-                    {
-                        Console.WriteLine(a);
-                    }
-                    else
-                    {
-                        Console.WriteLine(a);
-                    }
-                    break;
-                }
-            Console.WriteLine("{i}番目",i);
+                Console.WriteLine(dice);
             }
+                for(int j = 0; j <dice; j++)
+                if (dice % 2 == 0)
+                {
+                    Console.Write("偶数の数：");
+                }
+                else
+                {
+                    Console.Write("奇数の数：");
+                }
         }
     }
 }
