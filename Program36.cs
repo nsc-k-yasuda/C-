@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 
 namespace prob4_13
 {
@@ -8,18 +7,17 @@ namespace prob4_13
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            for (int i = 1; i <= 1; i++)
+            int dice = rnd.Next(1, 11);
+            for (int i = 0; i < dice; i++)
             {
-                int a = rnd.Next(1, 11);
-                //Console.Write(a);
-                if(a >= 5)
+                if (dice >= 5)
                 {
-                    Console.WriteLine("★ ");
+                    Console.Write("★");
                 }
                 else
                 {
-                    Console.WriteLine("発生した数値：",a);
-                    Console.Write("☆ ");
+                    Console.WriteLine("発生した数値：{0}",dice);
+                    Console.Write("☆");
                 }
             }
         }
