@@ -1,33 +1,30 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 
-namespace prob5_6
+namespace prob5_7
 {
     class Program
     {
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int[] data = new int[10];
-            int sum,avg;
+            int[] d = new int[5];
+            int sum, avg;
             sum = 0;
-            int x;
-            List<int> rndlist = new List<int>();
-            for (int i = 0; i < data.Length; i++)
+            for (int i = 0; i < d.Length; i++)
             {
-                x = rnd.Next(1,11);
-                Console.Write("{0} ",data[i]=x);
-                sum += data[i];
-                rndlist.Add(x);
+                int a = rnd.Next(11);
+                Console.Write(" {0}",d[i]=a);
+                sum += d[i];
             }
             Console.WriteLine();
-            int min = rndlist.Min();
-            int max = rndlist.Max();
-            avg = sum / data.Length;
-            Console.WriteLine("最大値：" + max);
-            Console.WriteLine("最小値：" + min);
+            avg = sum / d.Length;
+            Console.WriteLine("合計値：" + sum);
             Console.WriteLine("平均値：" + avg);
+
+            if (d > avg)
+            {
+                Console.WriteLine("平均値より大きい数：{0}" ,);
+            }
         }
     }
 }
