@@ -1,30 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace prob5_7
+namespace prob5_8
 {
     class Program
     {
         static void Main(string[] args)
         {
             Random rnd = new Random();
-            int[] d = new int[5];
-            int sum, avg;
-            sum = 0;
-            for (int i = 0; i < d.Length; i++)
+            int[] data = new int[5];
+            for (int i = 0; i <= 5; i++)
             {
-                int a = rnd.Next(11);
-                Console.Write(" {0}",d[i]=a);
-                sum += d[i];
-            }
-            Console.WriteLine();
-            avg = sum / d.Length;
-            Console.WriteLine("合計値：" + sum);
-            Console.WriteLine("平均値：" + avg);
+                data[i] = rnd.Next(-10,10)+1;
+                Console.Write("{0} ", data[i]);
 
-            if (d > avg)
-            {
-                Console.WriteLine("平均値より大きい数：{0}" ,);
             }
+            Console.Write("\r\n\r\n0より大きい数：");
+            for (int i = 0; i < 5; i++)
+                if (data[i] > 0) Console.Write("{0} ", data[i]);
+            Console.Write("\r\n0より小さい数：");
+            for (int i = 0; i < 5; i++)
+                if (data[i] < 0) Console.Write("{0} ", data[i]);
+            Console.Write("\r\n0の数：");
+            for (int i = 0; i < 5; i++)
+                if (data[i] == 0) Console.Write("{0} ", data[i]);
         }
     }
 }
