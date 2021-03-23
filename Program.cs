@@ -1,20 +1,23 @@
 ﻿using System;
 
-namespace prob5_1
+namespace prob5_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Random rnd = new Random();
-            int[] a = new int[7];
-            int s=-1;
-            for (int i = 0; i < a.Length; i++)
+            double[] d = new double[4];
+            d[0] = 0.2;
+            d[1] = -5.1;
+            d[2] = 3.2;    //  変数の代入
+            d[3] = 1.8;
+            int suuji = -1;
+            for (int i = 0; i < d.Length; i++)
             {
-                int dice = rnd.Next(1, 11);
-                s = s + 1;
-                Console.Write(" a[{0}]={1} ",s,dice);
+                suuji += 1;
+                Console.Write(" d[{0}]={1} ",suuji , d[i]);
             }
+            Console.WriteLine();
         }
     }
 }
