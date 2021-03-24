@@ -10,14 +10,31 @@ namespace prob5_10
     {
         static void Main(string[] args)
         {
-            int[][] a = new int[][] { new int[] { 0, 1 }, new int[] { 2 }, new int[] { 3, 4, 5, 6 } };
-            //  成分の表示
-            for (int m = 0; m < a.Length; m++)
+            // 乱数クラスはループの外で生成しましょう。
+            // デフォルトコンストラクタで生成すると
+            // 時間をシードとして初期化してくれます。
+            Random rnd = new Random();
+            int[] date = new int[7];
+            for (int i = 0; i < date.Length; i++)
             {
-                for (int n = 0; n < a[m].Length; n++)
+                // 乱数値は配列に格納します。
+                // Next関数で取得できる乱数は minValue以上 maxValue未満なので、
+                // 10までの数値がほしい場合11にする必要があります。
+                date[i] = rnd.Next(1, 11);
+                Console.Write(date[i] + " ");
+            }
+            // 改行を出力
+            Console.WriteLine();
+
+            for (int i = 0; i < date.Length; i++)
+            {
+                // 取得した乱数の数値分だけループ
+                for (int j = 0; j < date[i]; j++)
                 {
-                    Console.Write(a[m][n] + " ");
+                    // *を出力
+                    Console.Write("*");
                 }
+                // 改行を出力
                 Console.WriteLine();
             }
         }
