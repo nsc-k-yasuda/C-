@@ -1,15 +1,25 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-namespace prob6_1
+namespace prob6_2
 {
     class Program
     {
         static void Main(string[] args)
         {
-            MinMax m = new MinMax();
-            int a = 4, b = 2, c=10;
-            Console.WriteLine("{0}と{1}と{2}のうち、最大のものは{3}", a, b, c, m.Max(a, b, c));
-            Console.WriteLine("{0}と{1}と{2}のうち、最小のものは{3}", a, b, c, m.Min(a, b, c));
+            Calc c = new Calc();
+            double a = 4.1, b = 2.3;
+            double d = c.Add(a, b);
+            double e = c.Sub(a, b);
+            double f = c.Mul(a, b);
+            double g = c.Div(a, b);
+            Console.WriteLine(a + " + " + b + " = " + Math.Round(d,0, MidpointRounding.AwayFromZero));
+            Console.WriteLine(a + " - " + b + " = " + Math.Round(e, 0, MidpointRounding.AwayFromZero));
+            Console.WriteLine(a + " * " + b + " = " + Math.Round(f, 2, MidpointRounding.AwayFromZero));
+            Console.WriteLine(a + " / " + b + " = " + Math.Round(g, 14, MidpointRounding.AwayFromZero));
         }
     }
 }
