@@ -4,22 +4,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace prob6_2
+namespace prob2_3
 {
     class Program
     {
+        static int Square(int a, int b)
+        {
+            return a+b;
+        } 
         static void Main(string[] args)
         {
-            Calc c = new Calc();
-            double a = 4.1, b = 2.3;
-            double d = c.Add(a, b);
-            double e = c.Sub(a, b);
-            double f = c.Mul(a, b);
-            double g = c.Div(a, b);
-            Console.WriteLine(a + " + " + b + " = " + Math.Round(d,0, MidpointRounding.AwayFromZero));
-            Console.WriteLine(a + " - " + b + " = " + Math.Round(e, 0, MidpointRounding.AwayFromZero));
-            Console.WriteLine(a + " * " + b + " = " + Math.Round(f, 2, MidpointRounding.AwayFromZero));
-            Console.WriteLine(a + " / " + b + " = " + Math.Round(g, 14, MidpointRounding.AwayFromZero));
+            Random r = new Random();
+            int a = r.Next(1, 11);  //  aに1から10の乱数を代入
+            int b = r.Next(1, 11);  //  bに1から10の乱数を代入
+            int result = Square(a, b);  
+            Console.WriteLine("たて： " + a);
+            Console.WriteLine("よこ： " + b);
+            Console.WriteLine("■", result);
         }
     }
 }
